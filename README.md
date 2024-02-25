@@ -21,3 +21,13 @@ npm install
 ```shell
 npm run dev
 ```
+# Building and running in Docker
+```shell
+docker build -t react-vite-boilerplate .
+docker run -p 80:80 react-vite-boilerplate
+```
+# Building and publish image to private Docker Registry
+```shell
+docker build . -t registry.huunghianguyen.com/react-vite-boilerplate:1.0.0
+docker push registry.huunghianguyen.com/react-vite-boilerplate:1.0.0
+```
