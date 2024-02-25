@@ -1,0 +1,257 @@
+.weather-app-main {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ededed;
+  .header {
+    .intro-app {
+      text-align: center;
+      display: inline-block;
+      flex-direction: column;
+      padding: 20px;
+      width: 100%;
+
+      .logo {
+        font-size: 80px;
+      }
+      .title {
+        margin-top: -25px;
+        font-size: 30px;
+      }
+      .subtitle {
+        margin-top: 10px;
+      }
+      .product {
+        margin-top: 5px;
+      }
+    }
+  }
+  .container {
+    padding: 10px;
+    .card {
+      height: 600px;
+      width: 100%;
+      margin-top: 35px;
+      border-radius: 5px;
+      color: white;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-auto-rows: 300px;
+      .time {
+        padding: 10px 0 0 10px;
+        .o-clock,
+        .date {
+          font-weight: 700;
+          margin-top: 2px;
+        }
+        .next-time {
+          margin-top: 22px;
+          span {
+            font-weight: 500;
+            font-size: 14px;
+          }
+          .next-time-item {
+            margin-top: 10px;
+            span {
+              text-transform: capitalize;
+              margin-right: 20px;
+            }
+          }
+        }
+      }
+      .current-weather {
+        text-align: right;
+        margin-right: 10px;
+        margin-top: 10px;
+        .icon-weather {
+          margin-right: 20px;
+        }
+        .description {
+          margin-top: -30px;
+          font-size: 36px;
+          font-weight: 700;
+        }
+        .city {
+          margin-top: 2px;
+          font-weight: bold;
+          // color: #96a1ff;
+        }
+        .temperature {
+          margin-top: 12px;
+          font-size: 35px;
+          font-weight: 600;
+        }
+        .menu-temp {
+          span {
+            cursor: pointer;
+            margin-left: 10px;
+            font-weight: 700;
+          }
+        }
+      }
+      .calendar {
+        grid-column: span 2;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 180px;
+        .mini-card {
+          background: linear-gradient(
+            rgba(149, 186, 233, 0.4) 100%,
+            rgba(96, 153, 224, 0.4) 100%
+          );
+          width: 80px;
+          height: 120px;
+          text-align: center;
+          padding-top: 10px;
+          .day-of-the-week {
+            text-transform: uppercase;
+            font-size: 15px;
+            font-weight: 500;
+          }
+        }
+        .mini-card:nth-child(1) {
+          display: none;
+        }
+      }
+    }
+    .loading {
+      color: black;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .weather-app-main {
+    .header {
+      text-align: center;
+      .intro-app {
+        text-align: center;
+      }
+    }
+    .container {
+      padding: 0 20px 20px 20px;
+      .card {
+        .time {
+          padding: 36px 0 0 44px;
+        }
+        .current-weather {
+          text-align: right;
+          margin-top: 36px;
+          margin-right: 40px;
+        }
+        .calendar {
+          margin-top: 147px;
+          .mini-card {
+            background: none;
+          }
+          .mini-card:nth-child(1) {
+            display: inline-block;
+            background: linear-gradient(
+              rgba(149, 186, 233, 0.4) 100%,
+              rgba(96, 153, 224, 0.4) 100%
+            );
+            border-radius: 3px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .weather-app-main {
+    .container {
+      .card {
+        .calendar {
+          .mini-card {
+            margin-left: 30px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .weather-app-main {
+    display: flex;
+    flex-direction: row;
+    .header {
+      flex-basis: 30%;
+      .intro-app {
+        display: inline-block;
+        margin-left: 100px;
+        margin-top: 160px;
+        .logo {
+          font-size: 80px;
+        }
+        .title {
+          margin-top: -25px;
+          font-size: 30px;
+        }
+        .subtitle {
+          margin-top: 20px;
+        }
+        .product {
+          margin-top: 10px;
+        }
+      }
+    }
+    .container {
+      flex-basis: 70%;
+      margin-left: 100px;
+      .card {
+        width: 800px;
+        margin-top: 35px;
+        border-radius: 2%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 300px;
+        .time {
+          padding: 4rem 0 0 4rem;
+          .o-clock,
+          .date {
+            font-weight: 700;
+            margin-top: 2px;
+          }
+        }
+        .current-weather {
+          margin: 30px 60px 0 0;
+          .icon-weather {
+            margin-right: 20px;
+          }
+          .description {
+            margin-top: -28px;
+            font-size: 36px;
+            font-weight: 700;
+          }
+          .city {
+            margin-top: 2px;
+            font-weight: bold;
+          }
+          .temperature {
+            margin-top: 12px;
+            font-size: 35px;
+            font-weight: 600;
+          }
+          .menu-temp {
+            span {
+              cursor: pointer;
+              margin-left: 10px;
+              font-weight: 700;
+            }
+          }
+        }
+        .calendar {
+          margin-top: 130px;
+          .mini-card {
+            margin-left: 18px;
+            padding-top: 10px;
+          }
+        }
+      }
+    }
+  }
+}
